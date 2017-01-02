@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta content="" charset="utf-8">
+  <title>Title of the document</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<form name="myForm" class="demo-form" data-parsley-validate="">
+  <div class="container">
+    <div class="col-xs-12 col col-md-6">
+      <div class="row">
+        <h1>Formulaire Test Parsley</h1>
+      </div>
+      <div class="row">
+        <p>Civilité :
+          M: <input type="radio" name="gender" id="genderM" value="M" required="">
+          F: <input type="radio" name="gender" id="genderF" value="F">
+        </p>
+      </div>
+      <div class="row">
+        <p>Nom : <input type="text" class="form-control" name="lastname" data-parsley-trigger="keyup" data-parsley-length="[2, 40]" required="" placeholder="Entrez votre nom"></p>
+      </div>
+      <div class="row">
+        <p>Prénom :<input type="text" class="form-control" name="firstname" data-parsley-trigger="keyup" data-parsley-length="[2, 40]" required="" placeholder="Entrez votre prénom"></p>
+      </div>
+      <div class="row">
+        <p>Date De Naissance :<input type="date" class="form-control" name="birthday" data-parsley-group="block3" required=""></p>
+      </div>
+      <div class="row">
+        <p>Email :<input type="text" class="form-control" name="email" data-parsley-type="email" required="" placeholder="parsley@example.com"></p>
+      </div>
+      <div class="row">
+        <p>Adresse :<input type="text" class="form-control" id="autocomplete" placeholder="Entrez votre adresse" required=""></p>
+                    <input type="hidden" name="adresse">
+      </div>
+      <div class="row">
+        <p>Code Postal :<input type="text" class="form-control" name="cp" data-parsley-type="number" placeholder="Entrez votre code postal" required=""></p>
+      </div>
+      <div class="row">
+        <p>Ville :<input type="text" class="form-control" name="city" placeholder="Entrez votre ville" required=""></p>
+      </div>
+      <div class="row">
+        <p>Pays :<input type="text" class="form-control" name="pays" placeholder="Entrez votre pays" required=""></p>
+      </div>
+      <div class="row">
+        <div class="invalid-form-error-message"></div>
+        <input type="submit" class="btn btn-primary validate">
+      </div>
+    </div>
+  </div>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFzq2Gb2fbqFNz9EBsVr7L1UuIKGNGiSM&signed_in=true&libraries=places&callback=initAutocomplete" async defer></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/webservices.js"></script>
+<script src="js/parsley.min.js"></script>
+<script src="js/src/i18n/fr.js"></script>
+
+</body>
+</html>

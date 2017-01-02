@@ -1,0 +1,17 @@
+p {
+  font-weight: bold;
+}
+
+input.parsley-error {
+  border: 1px solid red;
+}
+
+.parsley-error-list{
+  color: #ff0000;
+}
+
+.parsley-errors-list li.parsley-required, .parsley-custom-error-message {
+  color: #ff0000;
+  font-weight: bold;
+  list-style: none;
+}
